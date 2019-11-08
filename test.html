@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function add(n1,n2,time){
+             return new Promise(function(reslove,reject){
+                window.setTimeout(function(){
+                  reslove(n1+n2);
+            },time);
+             });
+        }
+
+         async function test(){
+            console.log(1);
+             let reslut1=await add(5,6,2000);
+             let reslut2=await add(6,7,2000);
+             console.log(reslut1*reslut2);
+             }
+             
+
+        
+            
+    </script>    
+    
+</body>
+<button onclick="test()" style="height: 100px;width: 200px">button</button>
+</html>
